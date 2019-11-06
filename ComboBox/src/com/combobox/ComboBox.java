@@ -24,8 +24,9 @@ public class ComboBox extends JFrame {
 				"Строчка номер 3",
 				"Строчка номер 4"
 		};
-		
-		Container soderjimoe = getContentPane();
+		JComboBox editComboBox = new JComboBox(items);
+		editComboBox.setEditable(true);
+	
 		
 	}
 
