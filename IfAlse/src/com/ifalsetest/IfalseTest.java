@@ -1,24 +1,25 @@
 package com.ifalsetest;
 
+import java.util.Scanner;
 public class IfalseTest {
 
 	public static void main(String[] args) {
-		int a = 2;
-		int b = 4;
-		int c = 22;
-		int d = 36;
-		 if ((a < b) && (a < c) && (a < d)) {
-		        System.out.println(a + "А - наименьшее");
-		    } 
-		 else if ((b < a) && (b < c) && (b < d)) {
-		        System.out.println(b + "B - наименьшее");
-		    } 
-		 else if ((c < a) && (c < b) && (c < d)) {
-		        System.out.println(c + "С - наименьшее");
-		    } 
-		 else if ((d < a) && (d < b) && (d < c)) {
-		        System.out.println(d + "D  наименьшее");
-		    }
+		System.out.println("Введите число 1, 2 или 3");
+		Scanner scan = new Scanner(System.in);
+		int number =scan.nextInt();
+		if(number==1) {
+			System.out.print("Вы ввели число 1");
+		}
+		else if (number==2) {
+			System.out.print("Вы ввели число 2");
+		}
+		else if (number==3) {
+			System.out.print("Вы ввели число 3");
+		}
+		else {
+			System.out.print("Вы ввели неправильное число");
+		}
 	}
 
 }
+
