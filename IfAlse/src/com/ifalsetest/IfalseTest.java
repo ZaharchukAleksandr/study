@@ -4,20 +4,19 @@ import java.util.Scanner;
 public class IfalseTest {
 
 	public static void main(String[] args) {
-		System.out.println("Введите число 1, 2 или 3");
-		Scanner scan = new Scanner(System.in);
-		int number =scan.nextInt();
-		if(number==1) {
-			System.out.print("Вы ввели число 1");
-		}
-		else if (number==2) {
-			System.out.print("Вы ввели число 2");
-		}
-		else if (number==3) {
-			System.out.print("Вы ввели число 3");
-		}
-		else {
-			System.out.print("Вы ввели неправильное число");
+		int i =1;
+		System.out.println("Введите количество участников розыгрыша ...");
+		Scanner kol = new Scanner(System.in);
+		int klvUch = kol.nextInt();
+		System.out.println("ВВедите количество победителей ...");
+		Scanner pobed = new Scanner(System.in);
+		int klvPobed = kol.nextInt();
+		
+		while ( i<=klvPobed) 
+		{
+		int pobeditel = (int) ( Math.random() * klvUch );
+		System.out.println("Выиграл участник под номером - " + pobeditel);
+		i++;
 		}
 	}
 
