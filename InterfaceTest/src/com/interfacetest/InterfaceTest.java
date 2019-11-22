@@ -16,6 +16,13 @@ public class InterfaceTest implements Swimmable{
 	}
 
 
+	@Override
+	public void krya() {
+	
+		
+	}
+
+
 	
 
 	
