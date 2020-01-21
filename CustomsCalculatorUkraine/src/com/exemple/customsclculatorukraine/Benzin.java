@@ -8,26 +8,34 @@ public class Benzin extends CustomsCalculator{
 	public double castomsTax;
 	public double vatTax;
 	
-		public double exciseTax() {
-			if ( engineCapacity<2000) {
-				exciseTax = (double) 50 * (double) (engineCapacity/1000) * (year - engineCapacity + 1);
+		public void exciseTax() {
+			if ( engineCapacity<2001) {
+				exciseTax = (double) 50 * ((double) (engineCapacity/1000)) * (year - productionYear + 1);
 			}
 			else {
-				exciseTax = (double) 100 * (double) (engineCapacity/1000) * (year - engineCapacity + 1);
+				exciseTax = (double) 100 * ((double) (engineCapacity/1000)) * (year - engineCapacity + 1);
 			}
-			return exciseTax;
 		}
-		public double castomsTax() {
+		
+		public void castomsTax() {
 			castomsTax = (double) (carPrice * tax) / 100;
-			return castomsTax;
 		}
-		public double vatTax() {
+		
+		public void vatTax() {
 			vatTax = (double)  ((carPrice + castomsTax + exciseTax)*vat)/100;		
-			return vatTax;
 		}
-		public double allCustomsTax() {
+		
+		public void allCustomsTax() {
 			allCustomsTax = (double) exciseTax + castomsTax + vatTax;
-			return allCustomsTax;
 		}
-	
+		
+		
+		public void ptintOut() {
+			System.out.println("Акциз:");
+			System.out.println("Базовая ставка " + 55 + " * " + "обьем двигателя " + (double)(engineCapacity/1000) + " полных лет " + (year - (productionYear+1)));
+			System.out.println(exciseTax * kourse);
+			System.out.println("Итого платежей:");
+			System.out.println("Акциз " + (exciseTax * kourse) + " Пошлина " + (castomsTax * kourse) + " НДС " + (vatTax * kourse));
+			System.out.println(allCustomsTax * kourse);
+}
 }

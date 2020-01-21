@@ -1,27 +1,24 @@
 package com.exemple.customsclculatorukraine;
 
-import java.security.PublicKey;
 import java.util.Scanner;
 
 public class CustomsCalculator {
-
 	
-	public int engineCapacity;
-	public int carPrice;
-	public int productionYear;
+	public static double engineCapacity;
+	public static int carPrice;
+	public static int productionYear;
 	
-	public double kourse = 24.2527; 
-	public int year = 2020;
-	public int tax = 10;
-	public int vat = 20;
+	final double kourse = 24.2527; 
+	final int year = 2020;
+	final int tax = 10;
+	final int vat = 20;
 	
-	
-	public void clac() {
 
 
+	public static void main(String[] args) {
 		
-		Benzin CalculationFormila = new Benzin();
-		double raschet = CalculationFormila.allCustomsTax();
+		SimpleGui gui = new SimpleGui();
+		gui.setVisible(true);
 		
 		
 		System.out.println("Введите обьем двигателя автомобиля...");
@@ -36,25 +33,17 @@ public class CustomsCalculator {
 		Scanner scYear = new Scanner(System.in);
 		productionYear = scYear.nextInt();
 		
-		
-		System.out.println("Акциз:");
-		System.out.println("Базовая ставка " + 55 + " * " + "обьем двигателя " + engineCapacity + " полных лет " + (year - (productionYear+1)));
-		System.out.println(exciseTax * kourse);
-		System.out.println("Итого платежей:");
-		System.out.println("Акциз " + (exciseTax * kourse) + " Пошлина " + (castomsTax * kourse) + " НДС " + (vatTax * kourse));
-		System.out.println(allCustomsTax * kourse);
+		Benzin CalculationFormila = new Benzin();
 		
 		
-	}
-	
-	private void getExciseTax() {
-		return  getExciseTax;
-		
-	}
-
-	public static void main(String[] args) {
+		CalculationFormila.exciseTax();
+		CalculationFormila.castomsTax();
+		CalculationFormila.vatTax();
+		CalculationFormila.allCustomsTax();
 		
 		
+		
+		CalculationFormila.ptintOut();
 
 		
 	}
