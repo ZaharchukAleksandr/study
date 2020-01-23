@@ -2,9 +2,11 @@ package com.exemple.customsclculatorukraine;
 
 import java.util.Scanner;
 
-public class CustomsCalculator {
+import javax.swing.JFrame;
+
+public class CustomsCalculator extends JFrame{
 	
-	public static double engineCapacity;
+	public static int engineCapacity;
 	public static int carPrice;
 	public static int productionYear;
 	
