@@ -2,13 +2,15 @@ package com.exemple.customsclculatorukraine;
 
 import java.util.Scanner;
 
-public class CustomsCalculator {
+import javax.swing.JFrame;
 
+public class CustomsCalculator extends JFrame{
 	
 	public static int engineCapacity;
 	public static int carPrice;
 	public static int productionYear;
 	
+<<<<<<< HEAD
 	public static double kourse = 24.2527; 
 	public static int year = 2020;
 	public int tax = 10;
@@ -17,11 +19,25 @@ public class CustomsCalculator {
 	
 		Benzin CalculationFormila = new Benzin();
 		double raschet = CalculationFormila.allCustomsTax();
+=======
+	final double kourse = 24.2527; 
+	final int year = 2020;
+	final int tax = 10;
+	final int vat = 20;
+	
+
+
+	public static void main(String[] args) {
+		
+		SimpleGui gui = new SimpleGui();
+		gui.setVisible(true);
+>>>>>>> aa1e09ce26200f9a4ac0a319aef106ae7f886533
 		
 		
 		
 		
 		
+<<<<<<< HEAD
 		
 		
 		
@@ -32,6 +48,20 @@ public class CustomsCalculator {
 		System.out.println("Итого платежей:");
 		System.out.println("Акциз " + (CalculationFormila.exciseTax * kourse) + " Пошлина " + (CalculationFormila.castomsTax * kourse) + " НДС " + (CalculationFormila.vatTax * kourse));
 		System.out.println(CalculationFormila.allCustomsTax * kourse);
+=======
+		Benzin CalculationFormila = new Benzin();
+		
+		
+		CalculationFormila.exciseTax();
+		CalculationFormila.castomsTax();
+		CalculationFormila.vatTax();
+		CalculationFormila.allCustomsTax();
+		
+		
+		
+		CalculationFormila.ptintOut();
+
+>>>>>>> aa1e09ce26200f9a4ac0a319aef106ae7f886533
 		
 	}
 	
