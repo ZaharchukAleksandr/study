@@ -9,7 +9,7 @@ public class Benzin extends CustomsCalculator{
 	public double castomsTax;
 	public double vatTax;
 	
-<<<<<<< HEAD
+
 		void exciseTax() {
 			System.out.println("¬ведите обьем двигател€ автомобил€...");
 			Scanner scCapacity = new Scanner(System.in);
@@ -17,19 +17,19 @@ public class Benzin extends CustomsCalculator{
 			
 			if ( engineCapacity<2000) {
 				exciseTax = (double) 50 * (double) (engineCapacity/1000) * (year - engineCapacity + 1);
-=======
+
 		public void exciseTax() {
 			if ( engineCapacity<2001) {
 				exciseTax = (double) 50 * ((double) (engineCapacity/1000)) * (year - productionYear + 1);
->>>>>>> aa1e09ce26200f9a4ac0a319aef106ae7f886533
+
 			}
 			else {
 				exciseTax = (double) 100 * ((double) (engineCapacity/1000)) * (year - engineCapacity + 1);
 			}
-<<<<<<< HEAD
+
 			
 		}
-		void castomsTax() {
+		void castomsTaxInput() {
 			System.out.println("¬ведите цену автомобил€...");
 			Scanner scPrice = new Scanner(System.in);
 			carPrice = scPrice.nextInt();
@@ -37,7 +37,7 @@ public class Benzin extends CustomsCalculator{
 			castomsTax = (double) (carPrice * tax) / 100;
 			
 		}
-		void vatTax() {
+		void vatTaxInput() {
 			
 			System.out.println("¬ведите год производства автомобил€...");
 			Scanner scYear = new Scanner(System.in);
@@ -50,7 +50,7 @@ public class Benzin extends CustomsCalculator{
 			allCustomsTax = (double) exciseTax + castomsTax + vatTax;
 			return allCustomsTax;
 			
-=======
+
 		}
 		
 		public void castomsTax() {
@@ -63,7 +63,7 @@ public class Benzin extends CustomsCalculator{
 		
 		public void allCustomsTax() {
 			allCustomsTax = (double) exciseTax + castomsTax + vatTax;
->>>>>>> aa1e09ce26200f9a4ac0a319aef106ae7f886533
+
 		}
 		
 		
