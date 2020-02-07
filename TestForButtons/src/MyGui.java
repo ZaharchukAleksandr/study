@@ -1,5 +1,6 @@
 
 import java.awt.Container;
+import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -23,7 +24,7 @@ public class MyGui extends JFrame{
 		this.setResizable(false);
 		
 		Container cont = this.getContentPane();
-		cont.setLayout(new GridLayout(2,2,2,2));
+		cont.setLayout(new FlowLayout());
 		cont.add(txtField);
 		cont.add(button);
 		cont.add(lbl);
@@ -34,7 +35,7 @@ public class MyGui extends JFrame{
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			// TODO Auto-generated method stub
+			
 			
 		}
 		

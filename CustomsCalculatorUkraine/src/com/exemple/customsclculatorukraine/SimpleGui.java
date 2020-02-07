@@ -97,7 +97,7 @@ public class SimpleGui extends CustomsCalculator {
 		cont.add(free);
 		cont.add(free);
 		cont.add(free);
-		free.setActionCommand(allCustomsTax);
+		
 		cont.add(calcBtn);
 		calcBtn.addActionListener(new ActionListener() {
 			
