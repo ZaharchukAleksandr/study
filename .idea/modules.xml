@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ComboBox/ComboBox.iml" filepath="$PROJECT_DIR$/ComboBox/ComboBox.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CustomsCalculatorUkraine/CustomsCalculatorUkraine.iml" filepath="$PROJECT_DIR$/CustomsCalculatorUkraine/CustomsCalculatorUkraine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Echo/Echo.iml" filepath="$PROJECT_DIR$/Echo/Echo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Factorial/Factorial.iml" filepath="$PROJECT_DIR$/Factorial/Factorial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fibonachi/Fibonachi.iml" filepath="$PROJECT_DIR$/Fibonachi/Fibonachi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FizzBuzz/FizzBuzz.iml" filepath="$PROJECT_DIR$/FizzBuzz/FizzBuzz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Flight/Flight.iml" filepath="$PROJECT_DIR$/Flight/Flight.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FlightMashines/FlightMashines.iml" filepath="$PROJECT_DIR$/FlightMashines/FlightMashines.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HabrTestServer/HabrTestServer.iml" filepath="$PROJECT_DIR$/HabrTestServer/HabrTestServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HarbrTestClientServer/HarbrTestClientServer.iml" filepath="$PROJECT_DIR$/HarbrTestClientServer/HarbrTestClientServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/InterfaceTest/InterfaceTest.iml" filepath="$PROJECT_DIR$/InterfaceTest/InterfaceTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaRushArrayList/JavaRushArrayList.iml" filepath="$PROJECT_DIR$/JavaRushArrayList/JavaRushArrayList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaRushConstruktor/JavaRushConstruktor.iml" filepath="$PROJECT_DIR$/JavaRushConstruktor/JavaRushConstruktor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Kalku/Kalku.iml" filepath="$PROJECT_DIR$/Kalku/Kalku.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyCalculator/MyCalculator.iml" filepath="$PROJECT_DIR$/MyCalculator/MyCalculator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NewKeyImput/NewKeyImput.iml" filepath="$PROJECT_DIR$/NewKeyImput/NewKeyImput.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RemoteSystemsTempFiles/RemoteSystemsTempFiles.iml" filepath="$PROJECT_DIR$/RemoteSystemsTempFiles/RemoteSystemsTempFiles.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ReshetoEratosfena/ReshetoEratosfena.iml" filepath="$PROJECT_DIR$/ReshetoEratosfena/ReshetoEratosfena.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SimpleGui/SimpleGui.iml" filepath="$PROJECT_DIR$/SimpleGui/SimpleGui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StudyFlightMashines/StudyFlightMashines.iml" filepath="$PROJECT_DIR$/StudyFlightMashines/StudyFlightMashines.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TestFrame/TestFrame.iml" filepath="$PROJECT_DIR$/TestFrame/TestFrame.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TestWindow/TestWindow.iml" filepath="$PROJECT_DIR$/TestWindow/TestWindow.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Uprajneniya1_0/Uprajneniya1_0.iml" filepath="$PROJECT_DIR$/Uprajneniya1_0/Uprajneniya1_0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/VertexIfSwitch/VertexIfSwitch.iml" filepath="$PROJECT_DIR$/VertexIfSwitch/VertexIfSwitch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/VertexPolimorfizm/VertexPolimorfizm.iml" filepath="$PROJECT_DIR$/VertexPolimorfizm/VertexPolimorfizm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/VertexZadachiCikl/VertexZadachiCikl.iml" filepath="$PROJECT_DIR$/VertexZadachiCikl/VertexZadachiCikl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/converter/converter.iml" filepath="$PROJECT_DIR$/converter/converter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/study.iml" filepath="$PROJECT_DIR$/study.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ttttserv/ttttserv.iml" filepath="$PROJECT_DIR$/ttttserv/ttttserv.iml" />
+    </modules>
+  </component>
+</project>
