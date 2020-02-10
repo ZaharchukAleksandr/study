@@ -10,14 +10,15 @@ public class Benzin extends CustomsCalculator{
 	public double vatTax;
 	
 
-		void exciseTax() {
+		void exciseTaxInput() {
 			System.out.println("¬ведите обьем двигател€ автомобил€...");
 			Scanner scCapacity = new Scanner(System.in);
 			engineCapacity = scCapacity.nextInt();
 			
 			if ( engineCapacity<2000) {
 				exciseTax = (double) 50 * (double) (engineCapacity/1000) * (year - engineCapacity + 1);
-
+			}
+		}
 		public void exciseTax() {
 			if ( engineCapacity<2001) {
 				exciseTax = (double) 50 * ((double) (engineCapacity/1000)) * (year - productionYear + 1);
@@ -61,10 +62,7 @@ public class Benzin extends CustomsCalculator{
 			vatTax = (double)  ((carPrice + castomsTax + exciseTax)*vat)/100;		
 		}
 		
-		public void allCustomsTax() {
-			allCustomsTax = (double) exciseTax + castomsTax + vatTax;
-
-		}
+		
 		
 		
 		public void ptintOut() {
