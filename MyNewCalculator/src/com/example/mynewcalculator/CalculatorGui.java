@@ -33,7 +33,7 @@ public class CalculatorGui extends JFrame{
 	
 	private void monthButton() {
 		int num = 0;
-		String arr [] = {"AC", "+/-", "%", "/", "7", "8", "9", "X", "4", "5", "6", "-", "1", "2", "3", "+", "0", "00", ",", "=" }; 
+		String [] arr = {"AC", "+/-", "%", "/", "7", "8", "9", "X", "4", "5", "6", "-", "1", "2", "3", "+", "0", "00", ",", "=" }; 
 		JButton [] jbuttons = new JButton[arr.length];
 		
 		for (int i = 0; i<5; i++) {
