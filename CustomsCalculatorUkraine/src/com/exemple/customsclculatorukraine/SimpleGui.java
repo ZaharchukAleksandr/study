@@ -113,18 +113,18 @@ public class SimpleGui extends JFrame {
 		Container mainCont = getContentPane();
 		mainCont.add(mainPanel, BorderLayout.WEST);
 		
-		ActionListener actionListener = new TestActionListener();
-		canceBtn.addActionListener(actionListener);
-		getContentPane().add(mainPanel);
+//		ActionListener actionListener = new TestActionListener();
+//		canceBtn.addActionListener(actionListener);
+//		getContentPane().add(mainPanel);
 		
 	}
 	
-	public class TestActionListener implements ActionListener {
-		public void actionPrformed(ActionEvent e) {
-			resultsEuroArea.setText(e.getActionCommand());
-		}
-
-		
-	}
+//	public class TestActionListener implements ActionListener {
+//		public void actionPrformed(ActionEvent e) {
+//			resultsEuroArea.setText(e.getActionCommand());
+//		}
+//
+//		
+//	}
 
 }

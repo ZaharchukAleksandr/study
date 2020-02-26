@@ -26,4 +26,16 @@ public class GliderPlane extends Aircraft
 		    void writeTechnicalTask (){
 		        System.out.println("Technical task creation");
 		    }
+
+			@Override
+			void sendReport() {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			int totalWeight() {
+				// TODO Auto-generated method stub
+				return 0;
+			}
 	}
