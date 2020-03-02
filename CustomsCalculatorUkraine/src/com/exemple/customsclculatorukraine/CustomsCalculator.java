@@ -18,6 +18,9 @@ public class CustomsCalculator extends JFrame{
 	
 	
 	public static void main (String[] args) {
+		
+		SimpleGui gui = new SimpleGui();
+		Benzin benz = new Benzin();
 	
 	
 

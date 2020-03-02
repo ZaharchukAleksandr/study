@@ -10,12 +10,12 @@ import javax.swing.*;
 
 public class SimpleGui extends JFrame {
 	
-	private JLabel priceLbl = new JLabel ("Цена автомбиля   ");
-	private JLabel engineCapacitylbl = new JLabel("Обьем двигателя ");
+	private JLabel priceLbl = new JLabel ("Цена автомбиля");
+	private JLabel engineCapacitylbl = new JLabel("Обьем двигателя");
 	private JLabel yearLbl = new JLabel("Год производства");
-	private JTextField priceFld = new JTextField(11);
-	private JTextField capacityFld = new JTextField(11);
-	private JTextField yearFld = new JTextField(11);
+	public static JTextField priceFld = new JTextField(CustomsCalculator.carPrice);
+	public static JTextField capacityFld = new JTextField( CustomsCalculator.engineCapacity);
+	public static JTextField yearFld = new JTextField(CustomsCalculator.productionYear);
 	private JRadioButton euroRadBtn = new JRadioButton("Euro");
 	private JRadioButton usdRadBtn = new JRadioButton("Usd");
 	private JRadioButton uahRadBtn = new JRadioButton("Грн");
@@ -37,7 +37,7 @@ public class SimpleGui extends JFrame {
 		 */
 		super ("Таможенный калькулятор");
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-		this.setSize(700, 200);
+		this.setSize(650, 200);
 		this.setResizable(true);
 		this.setVisible(true);
 
@@ -86,11 +86,26 @@ public class SimpleGui extends JFrame {
 		
 		JPanel cancelOkPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT)); // Панель подтверждения или отмены действия
 		cancelOkPanel.add(canceBtn);
-		canceBtn.setActionCommand("Кнопка ОТИЕНИТЬ был нажата");
 		canceBtn.setPreferredSize(new Dimension(100, 25));
+		canceBtn.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+				
+			}
+		});
 		cancelOkPanel.add(okBtn);
-		okBtn.setActionCommand("Кнопка РАСЧИТАТЬ был нажата");
 		okBtn.setPreferredSize(new Dimension(100, 25));
+		okBtn.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				resultsEuroArea.append(Benzin.vatTax);
+				
+			}
+		});
+		
 		superBottomPanel.add(cancelOkPanel);
 		
 		bottomPanel.add(resultLblPanel);
@@ -113,18 +128,6 @@ public class SimpleGui extends JFrame {
 		Container mainCont = getContentPane();
 		mainCont.add(mainPanel, BorderLayout.WEST);
 		
-//		ActionListener actionListener = new TestActionListener();
-//		canceBtn.addActionListener(actionListener);
-//		getContentPane().add(mainPanel);
-		
-	}
-	
-//	public class TestActionListener implements ActionListener {
-//		public void actionPrformed(ActionEvent e) {
-//			resultsEuroArea.setText(e.getActionCommand());
-//		}
-//
-//		
-//	}
 
+	}
 }
