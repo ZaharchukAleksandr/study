@@ -17,9 +17,16 @@ public class Benzin extends CustomsCalculator{
 			
 			if ( engineCapacity<2000) {
 				exciseTax = (double) 50 * (double) (engineCapacity/1000) * (year - engineCapacity + 1);
+<<<<<<< HEAD
 
 		
 				else if ( engineCapacity<2001) {
+=======
+			}
+		}
+		public void exciseTax() {
+			if ( engineCapacity<2001) {
+>>>>>>> dc0b5d63ed53360e1b735aa9e2d9018477dd6a09
 				exciseTax = (double) 50 * ((double) (engineCapacity/1000)) * (year - productionYear + 1);
 
 			}
@@ -61,10 +68,7 @@ public class Benzin extends CustomsCalculator{
 			vatTax = (double)  ((carPrice + castomsTax + exciseTax)*vat)/100;		
 		}
 		
-		public void allCustomsTax() {
-			allCustomsTax = (double) exciseTax + castomsTax + vatTax;
-
-		}
+		
 		
 		
 		public void ptintOut() {

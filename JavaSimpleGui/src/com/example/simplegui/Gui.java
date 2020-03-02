@@ -7,68 +7,110 @@ import javax.swing.GroupLayout.Alignment;
 public class Gui extends JFrame
 {
 	
-	private JLabel price = new JLabel ("Цена автомбиля   ");
-	private JLabel engineCapacity = new JLabel("Обьем двигателя ");
-	private JLabel year = new JLabel("Год производства");
-	private JTextField priceFeald = new JTextField("     ",11);
-	private JTextField capacityFeald = new JTextField("     ",11);
-	private JTextField yearFeald = new JTextField("     ",11);
-	private JRadioButton euroRadButton = new JRadioButton("Euro");
-	private JRadioButton usdRadButton = new JRadioButton("Usd");
-	private JRadioButton uahRadButton = new JRadioButton("Грн");
-	private JRadioButton gasRadButton = new JRadioButton("Бензин");
+	private JLabel priceLbl = new JLabel ("Цена автомбиля   ");
+	private JLabel engineCapacitylbl = new JLabel("Обьем двигателя ");
+	private JLabel yearLbl = new JLabel("Год производства");
+	private JTextField priceFld = new JTextField(11);
+	private JTextField capacityFld = new JTextField(11);
+	private JTextField yearFld = new JTextField(11);
+	private JRadioButton euroRadBtn = new JRadioButton("Euro");
+	private JRadioButton usdRadBtn = new JRadioButton("Usd");
+	private JRadioButton uahRadBtn = new JRadioButton("Грн");
+	private JRadioButton gasRadBtn = new JRadioButton("Бензин");
 	private JRadioButton diselRadButton = new JRadioButton("Дизель");
+	private JButton okBtn = new JButton("Расчитать");
+	private JButton canceBtn = new JButton("Отменить");
+	private JLabel resultsEuroLbl = new JLabel("Результат в EURO");
+	private JLabel resultsUsdLbl = new JLabel("Результат в USD");
+	private JLabel resultsUahLbl = new JLabel("Результат в Грн");
+	private JTextArea resultsEuroArea = new JTextArea(5,20);
+	private JTextArea resultsUsdArea = new JTextArea();
+	private JTextArea resultsUahArea = new JTextArea();
 	
 	public Gui () 
 	{
+		/*
+		 * Создаем основное окно программы с основными параматрами
+		 */
 		super ("Таможенный калькулятор");
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-		this.setSize(600, 200);
+		this.setSize(700, 200);
 		this.setResizable(true);
 		this.setVisible(true);
+		
+		
+		
 
-		JPanel mainPanel = new JPanel(new GridLayout(2, 2, 0, 0));
-		JPanel autoPanel = new JPanel(new GridLayout(3, 1, 0, 0));
-		JPanel pricePanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-		pricePanel.add(price);
-		pricePanel.add(priceFeald);
-		pricePanel.add(euroRadButton);
-		pricePanel.add(usdRadButton);
-		pricePanel.add(uahRadButton);
-		JPanel capacityPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-		capacityPanel.add(engineCapacity);
-		capacityPanel.add(capacityFeald);
-		capacityPanel.add(gasRadButton);
-		capacityPanel.add(diselRadButton);
-		JPanel yaerPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-		yaerPanel.add(year);
-		yaerPanel.add(yearFeald);
-		yaerPanel.add(new JLabel("   "));
-		yaerPanel.add(new JLabel("   "));
-		yaerPanel.add(new JLabel("   "));
+		/*
+		 * Создаем три панели в которые будем помещать будущий интервейс
+		 */
+		JPanel mainPanel = new JPanel(new GridLayout(3, 1));  // Основная панел в которую разместим все остальные панели
+		JPanel upperPanel = new JPanel(new GridLayout(1, 3, 1, 1)); 
+		JPanel bottomPanel = new JPanel(new GridLayout(1, 3, 1, 1));  
+		JPanel superBottomPanel = new JPanel(new GridLayout(1, 0, 0, 0));
+			
+		JPanel lablePanel = new JPanel(new GridLayout(3,1,1,1)); // Панель с элементами ввода и выбора
+		lablePanel.add(priceLbl);
+		lablePanel.add(engineCapacitylbl);
+		lablePanel.add(yearLbl);
+		JPanel txtFldPanel = new JPanel(new GridLayout(3,1,1,1));
+		txtFldPanel.add(priceFld);
+		txtFldPanel.add(capacityFld);
+		txtFldPanel.add(yearFld);
+		JPanel radioBtnPanel = new JPanel(new GridLayout(3,1,1,1));
+		radioBtnPanel.add(euroRadBtn);
+		radioBtnPanel.add(usdRadBtn);
+		radioBtnPanel.add(uahRadBtn);
+		radioBtnPanel.add(gasRadBtn);
+		radioBtnPanel.add(diselRadButton);
+		radioBtnPanel.add(new JLabel());
+		radioBtnPanel.add(new JLabel());
 		
-		autoPanel.add(pricePanel);
-		autoPanel.add(capacityPanel);
-		autoPanel.add(yaerPanel);
+		upperPanel.add(lablePanel);
+		upperPanel.add(txtFldPanel);
+		upperPanel.add(radioBtnPanel);
 		
-		mainPanel.add(autoPanel);
+		JPanel resultLblPanel = new JPanel(new GridLayout(3,1,0,0));
+		resultLblPanel.add(resultsEuroLbl); 
+		resultLblPanel.add(resultsUsdLbl); 
+		resultLblPanel.add(resultsUahLbl);
+		
+		JPanel resultsTxtAreaPanel = new JPanel(new GridLayout(3,1,0,0));
+		resultsTxtAreaPanel.add(resultsEuroArea);
+		resultsEuroArea.setEditable(false);
+		resultsTxtAreaPanel.add(resultsUsdArea);
+		resultsUsdArea.setEditable(false);
+		resultsTxtAreaPanel.add(resultsUahArea);
+		resultsUahArea.setEditable(false);
+		
+		
+		JPanel cancelOkPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT)); // Панель подтверждения или отмены действия
+		cancelOkPanel.add(canceBtn);
+		canceBtn.setPreferredSize(new Dimension(100, 25));
+		cancelOkPanel.add(okBtn);
+		okBtn.setPreferredSize(new Dimension(100, 25));
+		superBottomPanel.add(cancelOkPanel);
+		
+		bottomPanel.add(resultLblPanel);
+		bottomPanel.add(resultsTxtAreaPanel);
+		mainPanel.add(upperPanel);
+		mainPanel.add(bottomPanel);
+		mainPanel.add(superBottomPanel);
+
+		/*
+		 * Создаем и груперуем кнопки JradioButton
+		 */
+		ButtonGroup priceBtnGroup = new ButtonGroup();
+		priceBtnGroup.add(euroRadBtn);
+		priceBtnGroup.add(uahRadBtn);
+		priceBtnGroup.add(usdRadBtn);
+		ButtonGroup gasGroup = new ButtonGroup();
+		gasGroup.add(gasRadBtn);
+		gasGroup.add(diselRadButton);
 		
 		Container mainCont = getContentPane();
 		mainCont.add(mainPanel, BorderLayout.WEST);
 		
-		ButtonGroup priceBtnGroup = new ButtonGroup();
-		priceBtnGroup.add(euroRadButton);
-		priceBtnGroup.add(uahRadButton);
-		priceBtnGroup.add(usdRadButton);
-		
-		ButtonGroup gasGroup = new ButtonGroup();
-		gasGroup.add(gasRadButton);
-		gasGroup.add(diselRadButton);
-		
-		
-		
 	}
-
-	
 
 }

@@ -14,7 +14,7 @@ public class Server {
     public static void main(String[] args) {
         try {
             try  {
-                server = new ServerSocket(4004); // серверсокет прослушивает порт 4004
+                server = new ServerSocket( 4004); // серверсокет прослушивает порт 4004
                 System.out.println("Сервер запущен!"); // хорошо бы серверу
                 									   // объявить о своем запуске
                 clientSocket = server.accept(); // accept() будет ждать пока
@@ -33,7 +33,7 @@ public class Server {
                     out.flush(); // выталкиваем все из буфера
 
                 } finally { // в любом случае сокет будет закрыт
-                    System.out.println("dfjkhgkdf");
+                    System.out.println("Quet");
                     clientSocket.close();
                     // потоки тоже хорошо бы закрыть
                     in.close();

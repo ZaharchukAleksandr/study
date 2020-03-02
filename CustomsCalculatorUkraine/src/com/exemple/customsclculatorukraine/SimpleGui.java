@@ -1,8 +1,6 @@
 package com.exemple.customsclculatorukraine;
 
 import java.awt.*;
-import java.awt.Dimension;
-import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.nio.channels.AcceptPendingException;
@@ -10,114 +8,123 @@ import java.util.Calendar;
 
 import javax.swing.*;
 
-public class SimpleGui extends CustomsCalculator {
+public class SimpleGui extends JFrame {
 	
-
+	private JLabel priceLbl = new JLabel ("Цена автомбиля   ");
+	private JLabel engineCapacitylbl = new JLabel("Обьем двигателя ");
+	private JLabel yearLbl = new JLabel("Год производства");
+	private JTextField priceFld = new JTextField(11);
+	private JTextField capacityFld = new JTextField(11);
+	private JTextField yearFld = new JTextField(11);
+	private JRadioButton euroRadBtn = new JRadioButton("Euro");
+	private JRadioButton usdRadBtn = new JRadioButton("Usd");
+	private JRadioButton uahRadBtn = new JRadioButton("Грн");
+	private JRadioButton gasRadBtn = new JRadioButton("Бензин");
+	private JRadioButton diselRadButton = new JRadioButton("Дизель");
+	private JButton okBtn = new JButton("Расчитать");
+	private JButton canceBtn = new JButton("Отменить");
+	private JLabel resultsEuroLbl = new JLabel("Результат в EURO");
+	private JLabel resultsUsdLbl = new JLabel("Результат в USD");
+	private JLabel resultsUahLbl = new JLabel("Результат в Грн");
+	private JTextArea resultsEuroArea = new JTextArea(5,20);
+	private JTextArea resultsUsdArea = new JTextArea();
+	private JTextArea resultsUahArea = new JTextArea();
 	
-	private JTextField priceTf = new JTextField();
-	private JTextField capacityTf = new JTextField();
-	private JTextField yearTf = new JTextField();
-	
-	private JLabel priceLbl = new JLabel("Цена в евро");
-	private JLabel capacityLbl = new JLabel("Обьем двигателя");
-	private JLabel yearLbl = new JLabel("Год выпуска");
-	private JLabel free = new JLabel();
-	 
-	private JRadioButton currencyRbUah = new JRadioButton ("Грн");
-	private JRadioButton  currencyRbEuro = new JRadioButton ("Euro");
-	private JRadioButton currencyRbDol = new JRadioButton ("USD");
-	
-	private JRadioButton  fuelRbGas = new JRadioButton ("Gas");
-	private JRadioButton  fuelRbDisel = new JRadioButton ("Disel");
-	private JRadioButton  fuelRbElektro = new JRadioButton ("Elektro");
-	
-	private JButton calcBtn = new JButton("Расчет");
-	
-		public SimpleGui() {
-		this.setTitle("Калькулятор растаможки");
+	public SimpleGui () 
+	{
+		/*
+		 * Создаем основное окно программы с основными параматрами
+		 */
+		super ("Таможенный калькулятор");
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-		this.setBounds(250, 250, 600, 150);
-		
-		Container cont = this.getContentPane();
-		
-		cont.setLayout(new GridLayout(3, 6));
-		
-		ButtonGroup btnGroupCurrency = new ButtonGroup();
-		btnGroupCurrency.add(currencyRbUah);
-		btnGroupCurrency.add(currencyRbDol);
-		btnGroupCurrency.add(currencyRbEuro);
-		
-		ButtonGroup btnGroupFuel = new ButtonGroup();
-		btnGroupFuel.add(fuelRbGas);
-		btnGroupFuel.add(fuelRbDisel);
-		btnGroupFuel.add(fuelRbElektro);
-		
-		cont.add(priceLbl);
-		cont.add(priceTf);
-		priceTf.addActionListener(new ActionListener() {
+		this.setSize(700, 200);
+		this.setResizable(true);
+		this.setVisible(true);
+
+		/*
+		 * Создаем три панели в которые будем помещать будущий интервейс
+		 */
+		JPanel mainPanel = new JPanel(new GridLayout(3, 1));  // Основная панел в которую разместим все остальные панели
+		JPanel upperPanel = new JPanel(new GridLayout(1, 3, 1, 1)); 
+		JPanel bottomPanel = new JPanel(new GridLayout(1, 3, 1, 1));  
+		JPanel superBottomPanel = new JPanel(new GridLayout(1, 0, 0, 0));
 			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				carPrice = priceTf.getColumns();
-				
-			}
-		});
+		JPanel lablePanel = new JPanel(new GridLayout(3,1,1,1)); // Панель с элементами ввода и выбора
+		lablePanel.add(priceLbl);
+		lablePanel.add(engineCapacitylbl);
+		lablePanel.add(yearLbl);
+		JPanel txtFldPanel = new JPanel(new GridLayout(3,1,1,1));
+		txtFldPanel.add(priceFld);
+		txtFldPanel.add(capacityFld);
+		txtFldPanel.add(yearFld);
+		JPanel radioBtnPanel = new JPanel(new GridLayout(3,1,1,1));
+		radioBtnPanel.add(euroRadBtn);
+		radioBtnPanel.add(usdRadBtn);
+		radioBtnPanel.add(uahRadBtn);
+		radioBtnPanel.add(gasRadBtn);
+		radioBtnPanel.add(diselRadButton);
+		radioBtnPanel.add(new JLabel());
+		radioBtnPanel.add(new JLabel());
 		
-			
+		upperPanel.add(lablePanel);
+		upperPanel.add(txtFldPanel);
+		upperPanel.add(radioBtnPanel);
 		
-		cont.add(currencyRbUah);
-		cont.add(currencyRbEuro);
-		cont.add(currencyRbDol);
-		cont.add(capacityLbl);
-		cont.add(capacityTf);
-		capacityTf.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				engineCapacity = capacityTf.getColumns();;
-				
-			}
-		});
-		cont.add(fuelRbGas);
-		cont.add(fuelRbDisel);
-		cont.add(fuelRbElektro);
-		cont.add(yearLbl);
-		cont.add(yearTf);
-		yearTf.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				productionYear = yearTf.getColumns();
-				
-			}
-		});
-		Benzin one = new Benzin();
-		one.allCustomsTax();
-		 
-		cont.add(free);
-		cont.add(free);
-		cont.add(free);
+		JPanel resultLblPanel = new JPanel(new GridLayout(3,1,0,0));
+		resultLblPanel.add(resultsEuroLbl); 
+		resultLblPanel.add(resultsUsdLbl); 
+		resultLblPanel.add(resultsUahLbl);
 		
-		cont.add(calcBtn);
-		calcBtn.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				Benzin one = new Benzin();
-				one.allCustomsTax();
-				 
-				
-			}
-		});
+		JPanel resultsTxtAreaPanel = new JPanel(new GridLayout(3,1,0,0));
+		resultsTxtAreaPanel.add(resultsEuroArea);
+		resultsEuroArea.setEditable(false);
+		resultsTxtAreaPanel.add(resultsUsdArea);
+		resultsUsdArea.setEditable(false);
+		resultsTxtAreaPanel.add(resultsUahArea);
+		resultsUahArea.setEditable(false);
 		
 		
+		JPanel cancelOkPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT)); // Панель подтверждения или отмены действия
+		cancelOkPanel.add(canceBtn);
+		canceBtn.setActionCommand("Кнопка ОТИЕНИТЬ был нажата");
+		canceBtn.setPreferredSize(new Dimension(100, 25));
+		cancelOkPanel.add(okBtn);
+		okBtn.setActionCommand("Кнопка РАСЧИТАТЬ был нажата");
+		okBtn.setPreferredSize(new Dimension(100, 25));
+		superBottomPanel.add(cancelOkPanel);
 		
+		bottomPanel.add(resultLblPanel);
+		bottomPanel.add(resultsTxtAreaPanel);
+		mainPanel.add(upperPanel);
+		mainPanel.add(bottomPanel);
+		mainPanel.add(superBottomPanel);
+
+		/*
+		 * Создаем и групируем кнопки JRadioButton
+		 */
+		ButtonGroup priceBtnGroup = new ButtonGroup();
+		priceBtnGroup.add(euroRadBtn);
+		priceBtnGroup.add(uahRadBtn);
+		priceBtnGroup.add(usdRadBtn);
+		ButtonGroup gasGroup = new ButtonGroup();
+		gasGroup.add(gasRadBtn);
+		gasGroup.add(diselRadButton);
 		
+		Container mainCont = getContentPane();
+		mainCont.add(mainPanel, BorderLayout.WEST);
 		
-		
-		
-	
+//		ActionListener actionListener = new TestActionListener();
+//		canceBtn.addActionListener(actionListener);
+//		getContentPane().add(mainPanel);
 		
 	}
 	
+//	public class TestActionListener implements ActionListener {
+//		public void actionPrformed(ActionEvent e) {
+//			resultsEuroArea.setText(e.getActionCommand());
+//		}
+//
+//		
+//	}
+
 }
