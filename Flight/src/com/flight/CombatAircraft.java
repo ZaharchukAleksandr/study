@@ -1,6 +1,7 @@
 package com.flight;
 
 public class CombatAircraft extends Aircraft {
+		public static final String Rockets = null;
 		private String tipe = "Боевоые самолеты";
 
 	    public CombatAircraft (String manufacturer, String boardNumber, int weight) {

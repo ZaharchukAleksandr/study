@@ -13,9 +13,9 @@ public class SimpleGui extends JFrame {
 	private JLabel priceLbl = new JLabel ("Цена автомбиля");
 	private JLabel engineCapacitylbl = new JLabel("Обьем двигателя");
 	private JLabel yearLbl = new JLabel("Год производства");
-	public static JTextField priceFld = new JTextField(CustomsCalculator.carPrice);
-	public static JTextField capacityFld = new JTextField( CustomsCalculator.engineCapacity);
-	public static JTextField yearFld = new JTextField(CustomsCalculator.productionYear);
+	public static JTextField priceFld = new JTextField();
+	public static JTextField capacityFld = new JTextField();
+	public static JTextField yearFld = new JTextField();
 	private JRadioButton euroRadBtn = new JRadioButton("Euro");
 	private JRadioButton usdRadBtn = new JRadioButton("Usd");
 	private JRadioButton uahRadBtn = new JRadioButton("Грн");
@@ -101,7 +101,7 @@ public class SimpleGui extends JFrame {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				resultsEuroArea.append(Benzin.vatTax);
+				resultsEuroArea.append(CustomsCalculator.vatTax);
 				
 			}
 		});

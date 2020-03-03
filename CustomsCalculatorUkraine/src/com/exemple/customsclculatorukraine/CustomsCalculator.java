@@ -1,30 +1,20 @@
 package com.exemple.customsclculatorukraine;
 
-import java.util.Scanner;
 
-import javax.swing.JFrame;
-
-public class CustomsCalculator extends JFrame{
+public class CustomsCalculator  {
 	
-	public static int engineCapacity;
-	public static int carPrice;
-	public static int productionYear;
+	public final static double kourse = 24.2527; 
+	public final static int year = 2020;
+	public final static int tax = 10;
+	public final static int vat = 20;
 	
-
-	public static double kourse = 24.2527; 
-	public static int year = 2020;
-	public int tax = 10;
-	public int vat = 20;
-	
+	public static int exciseTax; // Акцизный налог
+	public static int castomsTax; // Пощлина от стоимости
+	public static int vatTax;  // НДС
 	
 	public static void main (String[] args) {
 		
-		SimpleGui gui = new SimpleGui();
-		Benzin benz = new Benzin();
-	
-	
-
 		
 	}
-	
+
 }

@@ -16,6 +16,7 @@ public abstract class Aircraft {
    	public Aircraft (String manufacturer, String boardNumber, int weight) {
         this.manufacturer = manufacturer;
         this.boardNumber = boardNumber;
+        this.weight = weight;
     }
 
      public Aircraft (String manufacturer, String boardNumber,int weight, int capacity){
@@ -24,8 +25,6 @@ public abstract class Aircraft {
          this.weight = weight;
          this.capacity = capacity;
      }
-
-
 
      public int getWeight() {
          return weight;
@@ -46,9 +45,5 @@ public abstract class Aircraft {
      abstract void sendReport();
      abstract int totalWeight();
 
-
- 
 }
-
-
 

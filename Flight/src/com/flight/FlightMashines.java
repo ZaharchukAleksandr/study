@@ -7,13 +7,11 @@ public class FlightMashines {
 	
 		public static void main(String[] args) 
 		{
+			Bomber BomberAngar = new Bomber(null, null, 0);
 			
-		}
-
-			Bomber BomberAngar = new Bomber();
 			System.out.println("Количество деталей: " + BomberAngar.Chassis);
 			
-			CombatAircraft CombatAngar = new CombatAircraft();
+			CombatAircraft CombatAngar = new CombatAircraft(null, null, 0);
 			System.out.println("Количество деталей: " + CombatAngar.Rockets);
 			
 			CommercialAircraft CommmercialAngar = new CommercialAircraft();
@@ -27,9 +25,12 @@ public class FlightMashines {
 			
 			Helicopter HelicopterAngar = new Helicopter();
 			System.out.println("Количество деталей: " + HelicopterAngar.TopPropeller + HelicopterAngar.FrontPropeller);
-			
-			
 		}
+
+			
+			
+			
+		
 
 	}
 
