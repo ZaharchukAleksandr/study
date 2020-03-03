@@ -28,8 +28,8 @@ public class Kalku extends JFrame
                 // Отображение введенного текста
                 JOptionPane.showMessageDialog(Kalku.this, 
                                "Ваше слово: " + smallField.getText());
-            }
-        });
+            
+	
         // Поле с паролем
         JPasswordField password = new JPasswordField(12);
         password.setEchoChar('1');
@@ -43,6 +43,9 @@ public class Kalku extends JFrame
         setSize(400, 130);
         setVisible(true);
     }
+    
+    
+    
     public static void main(String[] args) {
         new Kalku();
     }
