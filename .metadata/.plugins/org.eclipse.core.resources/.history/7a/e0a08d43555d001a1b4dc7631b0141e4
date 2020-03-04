@@ -1,0 +1,40 @@
+package com.exemple.customsclculatorukraine;
+
+
+
+public class Benzin extends Car{
+
+	public Benzin(int engineCapacity, int carPrice, int productionYear) {
+		super(engineCapacity, carPrice, productionYear);
+		
+	}
+	
+	
+	// расчет акциза
+	@Override
+	void exciseTax() {
+		if ( engineCapacity<2001) {
+			CustomsCalculator.exciseTax =  50 * (engineCapacity/1000) * (CustomsCalculator.year - productionYear + 1);
+
+		}
+		else { 
+			CustomsCalculator.exciseTax = 100 * (engineCapacity/1000) * (CustomsCalculator.year - engineCapacity + 1);
+		}
+		
+		
+	}
+	// расчет ввозной пошлины 
+	@Override
+	void dutyTax() {
+		CustomsCalculator.castomsTax = (carPrice * CustomsCalculator.tax) / 100;
+		
+	}
+
+	@Override
+	void allTax() {
+		
+		
+	}
+	
+	 
+}

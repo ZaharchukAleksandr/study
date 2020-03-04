@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Gui.java&apos; to &apos;CustomsCalculatorUkraine/src&apos;&#x0D;&#x0A;- Original project: &apos;JavaSimpleGui&apos;&#x0D;&#x0A;- Destination element: &apos;CustomsCalculatorUkraine/src&apos;&#x0D;&#x0A;- Original element: &apos;com.example.simplegui.Gui.java&apos;" description="Copy compilation unit" destination="=CustomsCalculatorUkraine/src" element1="/src&lt;com.example.simplegui{Gui.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1581335165319" units="1" version="1.0"/>
+</session>

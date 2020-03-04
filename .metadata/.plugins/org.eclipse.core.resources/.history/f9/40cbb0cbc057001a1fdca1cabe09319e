@@ -1,0 +1,10 @@
+package caom.example.gettersetter;
+
+public class MainGetterSetter {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

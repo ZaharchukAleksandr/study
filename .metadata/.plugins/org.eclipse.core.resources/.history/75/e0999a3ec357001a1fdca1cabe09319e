@@ -1,0 +1,14 @@
+package caom.example.gettersetter;
+
+public class MainGetterSetter {
+
+	public static void main(String[] args) {
+		
+		Cat barsik = new Cat(null, 0, 0);
+		barsik.name = "Барсик";
+		barsik.weight = 2;
+		barsik.ear = 6;
+
+	}
+
+}

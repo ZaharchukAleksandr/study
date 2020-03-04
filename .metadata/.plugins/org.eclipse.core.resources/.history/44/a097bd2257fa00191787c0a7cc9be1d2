@@ -1,0 +1,123 @@
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
+
+import javax.swing.BoxLayout;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+import javax.swing.JSplitPane;
+
+import javax.swing.JTextField;
+import javax.swing.SwingUtilities;
+	
+	
+public class Jbutton extends JFrame{
+	
+	private final JSplitPane kmToML;
+	private final JSplitPane clsToFr;
+	private final JPanel mainPanel;
+	private final JPanel lblPanel;
+	private final JPanel txtPanel;
+	private final JPanel btnPanel;
+	private final JPanel txt1Panel;
+	private final JPanel lbl1Panel;
+	private final JLabel lbl;
+	private final JTextField txtField;
+	private final JButton convButton;
+	private final JTextField txt1Field;
+	private final JLabel lbl1;
+	
+	public Jbutton() {
+		
+	
+		 
+		kmToML = new JSplitPane();
+		clsToFr = new JSplitPane();
+//		-------------------------------------------
+		mainPanel = new JPanel();
+		lblPanel = new JPanel();
+		txtPanel = new JPanel();
+		btnPanel = new JPanel();
+		txt1Panel = new JPanel();
+		lbl1Panel = new JPanel();
+//		-------------------------------------------
+		mainPanel.add(lblPanel);
+		mainPanel.add(lblPanel);
+		mainPanel.add(txtPanel);
+		mainPanel.add(btnPanel);
+		mainPanel.add(txt1Panel);
+		mainPanel.add(lbl1Panel);
+//		-------------------------------------------
+		lbl = new JLabel("lbl1");
+		txtField = new JTextField("txt1");
+		convButton = new JButton(">>>");
+		txt1Field = new JTextField("txt2");
+		lbl1 = new JLabel("lbl2");
+//		-------------------------------------------
+		lblPanel.add(lbl);
+		add(lbl);
+		txtPanel.add(txtField);
+		add(txtField);
+		btnPanel.add(convButton);
+		add(convButton);	
+		txt1Panel.add(txt1Field);
+		add(txt1Field);		
+		lbl1Panel.add(lbl1);
+		add(lbl1);
+//		-------------------------------------------
+		setPreferredSize(new Dimension(800, 75)); 
+		getContentPane().setLayout(new GridLayout(2, 4, 5, 12));;
+		
+	
+		
+		
+		kmToML.setTopComponent(mainPanel);                 
+		kmToML.setBottomComponent(lblPanel);
+		kmToML.setBottomComponent(txtPanel);
+		kmToML.setBottomComponent(btnPanel);
+		kmToML.setBottomComponent(txt1Panel);
+		kmToML.setBottomComponent(lbl1Panel);
+		
+		clsToFr.setTopComponent(mainPanel);
+		clsToFr.setBottomComponent(lblPanel);
+		clsToFr.setBottomComponent(txtPanel);
+		clsToFr.setBottomComponent(lbl1Panel);
+		clsToFr.setBottomComponent(txt1Panel);
+		clsToFr.setBottomComponent(lbl1Panel);
+        
+ 
+    
+
+		
+
+        pack();
+		
+	}
+	
+		public static void main(String[] args) {
+			
+			SwingUtilities.invokeLater(new Runnable() {
+				
+				@Override
+				public void run() {
+					new Jbutton().setVisible(true);
+					
+				}
+			});
+		
+		
+
+	}
+}
+
+
+//JRadioButton button5 = new JRadioButton ("кнопка 5");
+//JRadioButton button6 = new JRadioButton ("кнопка 6");
+//JRadioButton button7 = new JRadioButton ("кнопка 7");
+//JRadioButton button8 = new JRadioButton ("кнопка 8");
+//JRadioButton button9 = new JRadioButton ("кнопка 9");
+//JRadioButton button10 = new JRadioButton ("кнопка 10");
+//JRadioButton button11 = new JRadioButton ("кнопка 11");

@@ -1,0 +1,33 @@
+package com.exemple.customsclculatorukraine;
+
+import java.util.Scanner;
+
+import javax.swing.JFrame;
+
+public class CustomsCalculator extends Car {
+	
+	public final static double kourse = 24.2527; 
+	public final static int year = 2020;
+	public final int tax = 10;
+	public final int vat = 20;
+	
+	 void exciseTaxInput() {
+			System.out.println("¬ведите обьем двигател€ автомобил€...");
+			Scanner scCapacity = new Scanner(System.in);
+			engineCapacity = scCapacity.nextInt();
+			engineCapacity = Integer.parseInt(SimpleGui.capacityFld.getText());
+	 }
+	
+	
+	public static void main (String[] args) {
+		
+		 
+		
+	
+		
+	}
+
+
+	
+	
+}

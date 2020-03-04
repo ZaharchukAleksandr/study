@@ -1,0 +1,40 @@
+package caom.example.gettersetter;
+
+public class Cat {
+	
+	private String name;
+	private int ear;
+	private int weight;
+	
+	public Cat (String name, int ear, int weight) {
+		
+		this.setName(name);
+		this.ear = ear;
+		this.weight = weight;
+		
+	}
+	
+	public void cat() {
+		
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+//	public Cat() {
+//		
+//		System.out.println("У нас нет кошки");
+//		
+//	}
+//	
+//	public void sayMeow() {
+//		
+//		System.out.println("Кошка говорит мяю");
+//		
+//	}
+}

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Users\t02104545\Desktop\WeatherPortlet-master"/>
+		<item value="C:\Users\t02104545\Desktop\StudyTorboatom\study"/>
+		<item value="C:\Users\t02104545\Desktop\Burakov\ДЗ_191004_TicTacToeUI"/>
+		<item value="C:\Users\t02104545\Desktop\Burakov\Conerter"/>
+		<item value="I:\Учеба\Одногрупники\Ageev"/>
+		<item value="C:\Users\t02104545\Desktop\Ageev\Employees"/>
+		<item value="C:\Users\t02104545\Desktop\Ageev"/>
+		<item value="C:\Users\t02104545\Desktop\fleshka\Новая папка (3)\Новая папка\proj"/>
+		<item value="C:\Users\t02104545\Desktop\fleshka\Новая папка (3)\Zaharchuk"/>
+		<item value="C:\Users\t02104545\Desktop\fleshka\Buriakovskoy\OOP"/>
+		<item value="C:\Users\t02104545\Desktop\fleshka\Ageev\Employees"/>
+		<item value="G:\Новая папка\proj"/>
+		<item value="C:\Users\t02104545\Desktop\11.03.2019\custom-workflow"/>
+		<item value="C:\Users\t02104545\Desktop\projekt_test"/>
+		<item value="C:\Users\t02104545\Desktop\workflows06\workflows"/>
+		<item value="C:\Users\t02104545\Downloads\alvex-courses-extras-master\alvex-courses-extras-master\2015-09-02\custom-workflow"/>
+		<item value="C:\Users\t02104545\Downloads\alvex-custom-workflows-master"/>
+		<item value="C:\Users\t02104545\Desktop\mem_TEST1"/>
+		<item value="C:\Users\t02104545\Desktop\mem_test"/>
+		<item value="C:\Users\t02104545\Desktop\workflows_test1"/>
+		<item value="C:\Users\t02104545\Desktop\123321"/>
+		<item value="C:\Users\t02104545\Desktop\projekt_test\workflows"/>
+		<item value="C:\Users\t02104545\Downloads\alvex-custom-workflows-master\alvex-custom-workflows-master"/>
+		<item value="C:\Users\t02104545\Downloads\alvex-courses-extras-master\alvex-courses-extras-master\2015-09-02\custom-workflow\tutorial-workflow-share"/>
+		<item value="C:\Users\t02104545\Desktop\образец\образец"/>
+		<item value="C:\Users\t02104545\Desktop\work\workflows(1)\workflows_work"/>
+		<item value="C:\Users\t02104545\Desktop\MyFirstProces\MyFirstProces\workflows"/>
+		<item value="C:\Users\t02104545\Desktop\workflows(1)\workflows"/>
+		<item value="C:\Users\t02104545\Downloads\alvex-courses-extras-master\alvex-courses-extras-master\2015-09-02\custom-workflow\tutorial-workflow-repo"/>
+		<item value="C:\Users\t02104545\Desktop\com.alvexcore.share.workflow-permissions-1.16-SNAPSHOT"/>
+		<item value="C:\Users\t02104545\Downloads\alvex-master"/>
+	</list>
+	<section name="CleanDialogSettings">
+		<item value="500" key="DIALOG_WIDTH"/>
+		<item value="false" key="TOGGLE_SELECTED"/>
+		<item value="401" key="DIALOG_HEIGHT"/>
+		<item value="433" key="DIALOG_X_ORIGIN"/>
+		<item value="97" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\t02104545\Downloads\alvex-courses-extras-master\alvex-courses-extras-master\2015-09-02\custom-workflow\tutorial-workflow-share"/>
+			<item value="C:\Users\t02104545\Downloads\alvex-courses-extras-master\alvex-courses-extras-master\2015-09-02\custom-workflow\tutorial-workflow-repo"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="NewWizardAction">
+		<item value="org.eclipse.jdt.ui.wizards.JavaProjectWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.jdt.ui.java"/>
+			<item value="org.eclipse.wst.jsdt.ui.java"/>
+			<item value="org.eclipse.jpt.jaxb"/>
+			<item value="org.eclipse.jpt.jpa"/>
+			<item value="org.activiti.designer.kickstart.eclipse.category"/>
+			<item value="org.eclipse.pde.PDE"/>
+			<item value="org.springsource.ide.eclipse.boot.wizards.category"/>
+			<item value="org.eclipse.wst.web.ui"/>
+			<item value="org.eclipse.wb"/>
+			<item value="org.eclipse.wb/org.eclipse.wb.rcp"/>
+			<item value="org.eclipse.xtend.ide.wizards"/>
+		</list>
+	</section>
+	<section name="BasicNewProjectResourceWizard">
+	</section>
+	<section name="org.eclipse.ui.internal.views.markers.FiltersConfigurationDialog">
+		<item value="Warnings on Selection" key="SELECTED_FILTER_GROUP"/>
+		<list key="PREV_SELECTED_ELEMENTS">
+		</list>
+	</section>
+	<section name="SaveAsDialogSettings">
+		<item value="525" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="579" key="DIALOG_HEIGHT"/>
+		<item value="79" key="DIALOG_X_ORIGIN"/>
+		<item value="8" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

@@ -1,0 +1,17 @@
+
+public class Main {
+	public static void main(String[] args) {
+		String name = "Алексндр";
+		int age = 32;
+		int a = 2;
+		int b = ++a;
+		int c =2 * a;
+		String city = "Харьков";
+		System.out.println("Имя: "+name);
+		System.out.println("Взозраст: "+age);
+		System.out.println("Город: "+city);
+		System.out.println(a);
+		System.out.println(b);
+		System.out.println(c);
+	}
+}

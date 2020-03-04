@@ -1,0 +1,33 @@
+package com.exemple.customsclculatorukraine;
+
+public abstract class Car {
+	
+	public int engineCapacity = 0;
+	public int carPrice = 0;
+	public int productionYear = 0;
+	
+	
+	
+	
+	
+	public Car(int engineCapacity, int carPrice, int productionYear) {
+		
+		this.engineCapacity = engineCapacity;
+		this.carPrice = carPrice;
+		this.engineCapacity = productionYear;
+	}
+	
+	public Car(int carPrice, int productionYear) {
+		this.carPrice = carPrice;
+		this.productionYear = productionYear;
+		
+	}
+	
+	 abstract void exciseTax(); // Акциз от обьема двигателя и года выпуска
+	 abstract void dutyTax(); //Пощлина от стоимости
+	 abstract void allTax(); // Все налоги
+	
+	
+	
+	
+}

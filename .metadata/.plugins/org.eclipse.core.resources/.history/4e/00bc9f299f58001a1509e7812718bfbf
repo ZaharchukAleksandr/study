@@ -1,0 +1,14 @@
+package com.example.vertextrim;
+
+public class Trim {
+
+	public static void main(String[] args) {
+		String sentence1 = "     Java - очень крутой язык програмирования      ";
+		String sentence2 = "     Java - очень крутой язык програмирования      ";
+		
+		System.out.println(sentence1);
+				
+
+	}
+
+}

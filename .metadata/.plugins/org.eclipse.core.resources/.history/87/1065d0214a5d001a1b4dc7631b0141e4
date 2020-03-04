@@ -1,0 +1,38 @@
+package com.exemple.customsclculatorukraine;
+
+
+
+public class Benzin extends Car{
+
+	public Benzin(int engineCapacity, int carPrice, int productionYear) {
+		super(engineCapacity, carPrice, productionYear);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	void exciseTax() {
+		if ( engineCapacity<2001) {
+			exciseTax = (double) 50 * ((double) (engineCapacity/1000)) * (year - productionYear + 1);
+
+		}
+		else { 
+			exciseTax = (double) 100 * ((double) (engineCapacity/1000)) * (year - engineCapacity + 1);
+		}
+		
+		
+	}
+
+	@Override
+	void dutyTax() {
+		
+		
+	}
+
+	@Override
+	void allTax() {
+		
+		
+	}
+	
+	 
+}
