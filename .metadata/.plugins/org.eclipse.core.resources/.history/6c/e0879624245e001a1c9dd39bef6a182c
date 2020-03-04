@@ -1,6 +1,5 @@
 package com.exemple.customsclculatorukraine;
 
-import java.util.Scanner;
 
 public class CustomsCalculator  {
 	
@@ -12,15 +11,9 @@ public class CustomsCalculator  {
 	public static int exciseTax; // Акцизный налог
 	public static int castomsTax; // Пощлина от стоимости
 	public static int vatTax;  // НДС
-	public static int allTax;
 	
 	public static void main (String[] args) {
 		
-		System.out.println("Калькулятор растаможки автомобиля тестовая версия");
-		
-		System.out.println("Введите обьем двигателя автомобиля...");
-		Scanner scCapacity = new Scanner(System.in);
-		Car.= scCapacity.nextInt();
 		
 	}
 

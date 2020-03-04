@@ -27,21 +27,19 @@ public class Benzin extends Car{
 	// расчет ввозной пошлины 
 	@Override
 	void dutyTax() {
-		CustomsCalculator.castomsTax = (getCarPrice() * 100) / CustomsCalculator.tax;
+		CustomsCalculator.castomsTax = (getCarPrice() * CustomsCalculator.tax) / 100;
 		
 	}
 	// Расчет НДС
 	@Override
 	void vatTax() {
-		CustomsCalculator.vatTax = ((CustomsCalculator.castomsTax + CustomsCalculator.exciseTax) / 100)*CustomsCalculator.vat ;
+		vatTax = ()
 		
 		
 	}
 	// Сумма всех налогов
 	@Override
 	void allTax() {
-		CustomsCalculator.allTax = CustomsCalculator.exciseTax + CustomsCalculator.castomsTax + CustomsCalculator.vatTax;
-		
 		
 		
 	}
