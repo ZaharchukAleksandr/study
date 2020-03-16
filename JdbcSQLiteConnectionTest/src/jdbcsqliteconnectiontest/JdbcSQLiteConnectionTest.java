@@ -12,8 +12,7 @@ import java.util.logging.Logger;
 public class JdbcSQLiteConnectionTest {
 
 
-    public static void main(String[] args) 
-    {
+    public static void main(String[] args) {
       //Шаг 1 Подключить драйвер +
         System.out.println("-------- Oracle JDBC Connection Testing ------");
         try {

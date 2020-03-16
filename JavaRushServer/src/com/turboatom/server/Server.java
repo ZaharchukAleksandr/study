@@ -10,12 +10,16 @@ public class Server {
     private static ServerSocket server; // серверсокет
     private static BufferedReader in; // поток чтения из сокета
     private static BufferedWriter out; // поток записи в сокет
+    public static String serverMassages; //Поток для техническрй информации
 
     public static void main(String[] args) {
+    	
+    	
         try {
             try  {
                 server = new ServerSocket( 4004); // серверсокет прослушивает порт 4004
-                System.out.println("Сервер запущен!"); // хорошо бы серверу
+                System.out.println("Сервер запущен");
+                serverMassages = "Сервер запущен!"; // хорошо бы серверу
                 									   // объявить о своем запуске
                 clientSocket = server.accept(); // accept() будет ждать пока
                 								//кто-нибудь не захочет подключиться
